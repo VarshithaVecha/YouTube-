@@ -1,0 +1,275 @@
+.pic{
+    width: 100%;
+    display: block;
+}
+.text1{
+    font-family: Roboto,Arial;
+    font-size: 14px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.text2{
+    font-family: Roboto,Arial;
+    font-size: 12px;
+    color: rgb(104, 101, 101);
+    margin-left: 5px;
+    vertical-align: top;
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+.text3{
+    font-family: Roboto,Arial;
+    font-size: 12px;
+    color: rgb(104, 101, 101);
+    margin-left: 5px;
+    vertical-align: top;
+    margin-top: 0;
+}
+.pic1{
+    width: 40px;
+    border-radius: 20px;
+}
+.vedio-grid-info{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.channel{
+    vertical-align: top;
+}
+.vedio-info{
+    display: inline-block;
+    width: 200px;
+    
+}
+.thumbnail{
+    margin-bottom: 12px;
+    position: relative;
+}
+.vedio-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+@media(max-width:800px){
+    .vedio-grid{
+    grid-template-columns: 1fr 1fr;
+
+    }
+}
+@media(min-width:1200px){
+    .vedio-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+body{
+    margin: 0;
+    padding-top: 110px;
+    padding-left: 120px;
+    padding-right: 30px;
+}
+/* header concept */
+.text{
+    font-size: 19px;
+    display: block;
+    height: 46px;
+    flex: 1;
+    padding-left: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0,0, 0.05);
+    width: 0;
+}
+.header{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: rgb(230, 224, 224);
+    z-index: 100;
+}
+.left-section{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    height: 30px;
+    margin-left: 24px;
+    margin-right: 39px;
+    cursor: pointer;
+}
+.logo{
+    height: 30px;
+    cursor: pointer;
+}
+.middle-section{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+}
+.search{
+    height: 50px;
+    width: 70px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    background-color: rgb(240, 240, 240);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+.search,
+.voice,
+.create-box,
+.apps-box,
+.notification-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-icon{
+    height: 30px;
+    cursor: pointer;
+}
+.search .tooltip,
+.voice .tooltip,
+.create-box .tooltip,
+.apps-box .tooltip,
+.notification-box .tooltip{
+    font-family: Roboto,Arial;
+    position:absolute;
+    background-color: gray;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    bottom: -50px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.search:hover .tooltip,
+.voice:hover .tooltip,
+.create-box:hover .tooltip,
+.apps-box:hover .tooltip,
+.notification-box:hover .tooltip{
+    opacity: 1;
+}
+.voice{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(248, 248, 248);
+}
+.voice-icon{
+    height: 30px;
+    cursor: pointer;
+}
+.right-section{
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+.upload{
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.apps{
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.notification{
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.notification-count{
+    position: absolute;
+    top: -2px;
+    right: 16px;
+    background-color: rgb(202, 1, 1);
+    color: white;
+    font-family: Roboto,Arial;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+.channel-pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/*sidebar code*/
+.sidebar{
+    position: fixed;
+    background-color: white;
+    top: 70px;
+    left: 0px;
+    bottom: 0;
+    width: 80px;
+    z-index: 200;
+}
+.sidebar-link{
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.sidebar-link:hover{
+    background-color: rgb(230, 225, 225);
+}
+.sidebar-link img{
+    height: 30px;
+    margin-bottom: 4px;
+}
+.sidebar-link div{
+    font-family: Roboto,Arial;
+    font-size: 12px;
+}
+.vedio-time{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    font-family: Roboto,Arial;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+}
